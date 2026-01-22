@@ -1,0 +1,19 @@
+body { font-family: Arial; background: #f4f6f9; margin: 0; }
+header { background: #1f2937; color: white; padding: 16px; font-size: 20px; }
+main { max-width: 900px; margin: auto; padding: 20px; }
+section { background: white; padding: 16px; margin-bottom: 20px; border-radius: 6px; }
+input, select, button { width: 100%; padding: 8px; margin: 6px 0; }
+button { background: #2563eb; color: white; border: none; cursor: pointer; }
+button:hover { background: #1e40af; }
+.cards { display: flex; gap: 16px; }
+.card { flex:1; background:#eef2ff; padding:16px; border-radius:6px; text-align:center; }
+table { width:100%; border-collapse: collapse; }
+th, td { padding:10px; border-bottom:1px solid #ddd; }
+.error { color:red; font-size: 0.9em; margin-top: -8px; margin-bottom: 6px; min-height: 18px; }
+label {
+  font-weight: bold;
+  margin-top: 10px;
+  display: block;
+}
+ul { list-style: none; padding:0; }
+ul li { padding:4px 0; }

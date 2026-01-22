@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>HRMS Lite</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>HRMS Lite</header>
+
+<main>
+
+<section>
+  <h2>Dashboard</h2>
+  <div class="cards">
+    <div class="card">
+      <h3 id="empCount">0</h3>
+      <p>Total Employees</p>
+    </div>
+    <div class="card">
+      <h3 id="presentCount">0</h3>
+      <p>Total Present Records</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>Add Employee</h2>
+  <input id="eid" placeholder="Employee ID">
+  <input id="fullName" placeholder="Full Name">
+  <input id="email" placeholder="Email">
+  <input id="dept" placeholder="Department">
+  <button onclick="addEmployee()">Add Employee</button>
+  <p class="error" id="error"></p>
+</section>
+
+<section>
+  <h2>Employees</h2>
+  <ul id="employees"></ul>
+</section>
+
+<section>
+  <h2>Mark Attendance</h2>
+
+  <label for="empSelect">Employee</label>
+  <select id="empSelect"></select>
+  <p class="error" id="empError"></p>
+
+  <label for="date">Date</label>
+  <input type="date" id="date">
+  <p class="error" id="dateError"></p>
+
+  <label for="status">Status</label>
+  <select id="status">
+    <option value="">-- Select status --</option>
+    <option value="Present">Present</option>
+    <option value="Absent">Absent</option>
+  </select>
+  <p class="error" id="statusError"></p>
+
+  <button id="markBtn" onclick="markAttendance()">Mark</button>
+</section>
+
+
+<section>
+  <h2>Attendance Records</h2>
+  <input type="date" id="filterDate">
+  <button onclick="filterAttendance()">Filter</button>
+  <ul id="attendance"></ul>
+</section>
+
+<section>
+  <h2>Attendance Summary</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Employee</th>
+        <th>Present Days</th>
+      </tr>
+    </thead>
+    <tbody id="summaryTable"></tbody>
+  </table>
+</section>
+
+</main>
+
+<script src="app.js"></script>
+</body>
+</html>
